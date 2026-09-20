@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Issue Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans text-black bg-white">
+    <div class="px-7 py-6">
+      <div class="flex justify-end">
+        <button
+          class="border border-[#007bff] text-[#007bff] rounded-full px-5 py-3 text-lg hover:bg-[#007bff] hover:text-white"
+        >
+          Sign out
+        </button>
+      </div>
+      <h1 class="text-center text-5xl font-normal mt-16 mb-24">ISSUE TRACKER</h1>
+      <div>
+        <!-- Title -->
+        <label class="block text-xl mb-4">Title</label>
+        <input
+          type="text"
+          placeholder="Title ..."
+          class="w-full border border-gray-300 rounded px-4 py-4 text-lg placeholder-gray-500 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        />
+
+        <!-- Author -->
+        <label class="block text-xl mb-4">Author</label>
+        <select
+          class="w-full border border-gray-300 rounded px-4 py-4 text-lg bg-white mb-8 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          <option>Dang</option>
+          <option>Khang</option>
+          <option>Tony</option>
+        </select>
+
+        <!-- Severity -->
+        <label class="block text-xl mb-4">Severity</label>
+        <select
+          class="w-full border border-gray-300 rounded px-4 py-4 text-lg bg-white mb-8 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          <option>Low</option>
+          <option selected>Medium</option>
+          <option>High</option>
+        </select>
+
+        <!-- Add button -->
+        <div class="flex justify-end">
+          <button
+            class="bg-[#007bff] hover:bg-blue-600 text-white text-xl rounded px-5 py-4"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+      <hr class="border-gray-200 my-8" />
+      <!-- Heading on the left, search box on the right -->
+      <div class="flex items-center justify-between mb-10">
+        <h2 class="text-4xl font-semibold">List Issue</h2>
+        <input
+          type="text"
+          placeholder="Search by description"
+          class="border border-gray-300 rounded px-4 py-4 text-lg placeholder-gray-500 w-72 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        />
+      </div>
+
+      <!-- Filter row -->
+      <div class="flex items-center mb-10">
+        <span class="w-60 text-xl">Filter:</span>
+        <button class="bg-[#007bff] hover:bg-blue-600 text-white text-lg rounded px-7 py-3 mr-2">
+          All
+        </button>
+        <button class="bg-[#28a745] hover:bg-green-600 text-white text-lg rounded px-4 py-3 mr-2">
+          Open
+        </button>
+        <button class="bg-[#17a2b8] hover:bg-cyan-600 text-white text-lg rounded px-4 py-3">
+          Close
+        </button>
+      </div>
+
+      <!-- Order By row -->
+      <div class="flex items-center mb-10">
+        <span class="w-60 text-xl">Order By:</span>
+
+        <select
+          class="border border-gray-300 rounded px-5 py-4 text-lg bg-white w-60 focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-400"
+        >
+          <option>Choose...</option>
+          <option>ASC</option>
+          <option>DESC</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
